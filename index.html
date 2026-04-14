@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luis Alan Castañeda | Full Stack Sr Developer</title>
+  <meta name="description" content="Luis Alan Castañeda Villalobos — Full Stack Senior Developer con +10 años de experiencia en Node.js, React, AWS y arquitecturas cloud." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" style="font-size:1rem">
+        <span class="nav__logo-bracket">&lt;</span>lacv<span class="nav__logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#demo" class="nav__link">Demo</a></li>
+        <li><a href="#projects" class="nav__link">Proyectos</a></li>
+        <li><a href="#experience" class="nav__link">Experiencia</a></li>
+        <li><a href="#contact" class="nav__link">Contacto</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas" class="hero__canvas"></canvas>
+    <div class="hero__noise"></div>
+
+    <div class="hero__content">
+      <div class="hero__available">
+        <span class="hero__available-dot"></span>
+        Disponible para nuevas oportunidades
+      </div>
+
+      <h1 class="hero__title">
+        <span class="hero__greeting">Hola, soy</span>
+        <span class="hero__name gradient-text" id="heroName">Luis Alan Castañeda</span>
+        <span class="hero__typed-wrapper">
+          <span id="typedText" class="hero__typed"></span>
+          <span class="hero__cursor">|</span>
+        </span>
+      </h1>
+
+      <p class="hero__desc">
+        Full Stack Senior Developer con <strong id="yearsExp">10+</strong> años construyendo
+        sistemas escalables — desde arquitecturas cloud en AWS hasta apps móviles.
+        Integro <strong>Inteligencia Artificial</strong> (OpenAI, LLMs, chatbots) como parte real de la solución.
+        Egresado del <strong>Instituto Tecnológico de La Laguna</strong>.
+      </p>
+
+      <div class="hero__cta">
+        <a href="#contact" class="btn btn--primary">
+          Trabajemos juntos <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#projects" class="btn btn--ghost">
+          Ver proyectos
+        </a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-num counter" data-target="10">0</span><span>+</span>
+          <span class="hero__stat-label">Años exp.</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num counter" data-target="50">0</span><span>+</span>
+          <span class="hero__stat-label">Proyectos</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num counter" data-target="30">0</span><span>+</span>
+          <span class="hero__stat-label">Tecnologías</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <span>scroll</span>
+      <div class="hero__scroll-line">
+        <div class="hero__scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">// expertise</span>
+        <h2 class="section__title">Stack <span class="gradient-text">Tecnológico</span></h2>
+        <p class="section__desc">Tecnologías con las que construyo soluciones de nivel enterprise</p>
+      </div>
+
+      <div class="skills__grid">
+
+        <!-- Backend -->
+        <div class="skill-card reveal">
+          <div class="skill-card__header">
+            <div class="skill-card__icon" style="--icon-color: #68a063; --icon-bg: rgba(104,160,99,0.12)">
+              <i class="fas fa-server"></i>
+            </div>
+            <div>
+              <h3 class="skill-card__title">Backend</h3>
+              <span class="skill-card__level">Avanzado</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag--expert" data-tip="Runtime JS">Node.js</span>
+            <span class="tag tag--expert" data-tip="Framework enterprise">NestJS</span>
+            <span class="tag tag--expert" data-tip="Framework minimalista">Express</span>
+            <span class="tag tag--expert" data-tip="Full-stack React">Next.js</span>
+            <span class="tag" data-tip="Scripting & ML">Python</span>
+            <span class="tag" data-tip="Enterprise apps">Java</span>
+            <span class="tag" data-tip="Ecosystem Microsoft">.NET</span>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-card reveal">
+          <div class="skill-card__header">
+            <div class="skill-card__icon" style="--icon-color: #61dafb; --icon-bg: rgba(97,218,251,0.12)">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div>
+              <h3 class="skill-card__title">Frontend</h3>
+              <span class="skill-card__level">Avanzado</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag--expert">React</span>
+            <span class="tag tag--expert">Angular</span>
+            <span class="tag tag--expert">Next.js</span>
+            <span class="tag tag--expert">TypeScript</span>
+            <span class="tag tag--expert">JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Mobile -->
+        <div class="skill-card reveal">
+          <div class="skill-card__header">
+            <div class="skill-card__icon" style="--icon-color: #54c5f8; --icon-bg: rgba(84,197,248,0.12)">
+              <i class="fas fa-mobile-screen-button"></i>
+            </div>
+            <div>
+              <h3 class="skill-card__title">Mobile</h3>
+              <span class="skill-card__level">Avanzado</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag--expert">React Native</span>
+            <span class="tag tag--expert">Flutter</span>
+          </div>
+        </div>
+
+        <!-- AWS Cloud (wide) -->
+        <div class="skill-card skill-card--wide reveal">
+          <div class="skill-card__header">
+            <div class="skill-card__icon" style="--icon-color: #ff9900; --icon-bg: rgba(255,153,0,0.12)">
+              <i class="fab fa-aws"></i>
+            </div>
+            <div>
+              <h3 class="skill-card__title">AWS Cloud</h3>
+              <span class="skill-card__level">Avanzado</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag--expert tag--aws">IAM</span>
+            <span class="tag tag--expert tag--aws">EC2</span>
+            <span class="tag tag--expert tag--aws">S3</span>
+            <span class="tag tag--expert tag--aws">ECS</span>
+            <span class="tag tag--expert tag--aws">EKS</span>
+            <span class="tag tag--expert tag--aws">Fargate</span>
+            <span class="tag tag--expert tag--aws">Route 53</span>
+            <span class="tag tag--expert tag--aws">Amplify</span>
+            <span class="tag tag--expert tag--aws">RDS</span>
+            <span class="tag tag--expert tag--aws">DynamoDB</span>
+            <span class="tag tag--expert tag--aws">OpenSearch</span>
+            <span class="tag tag--expert tag--aws">MemoryDB</span>
+            <span class="tag tag--expert tag--aws">IoT Core</span>
+            <span class="tag tag--expert tag--aws">Translate</span>
+            <span class="tag tag--expert tag--aws">VPN</span>
+            <span class="tag tag--expert tag--aws">Security Groups</span>
+            <span class="tag tag--expert tag--aws">SSL/ACM</span>
+          </div>
+        </div>
+
+        <!-- DevOps -->
+        <div class="skill-card reveal">
+          <div class="skill-card__header">
+            <div class="skill-card__icon" style="--icon-color: #e05d44; --icon-bg: rgba(224,93,68,0.12)">
+              <i class="fas fa-code-branch"></i>
+            </div>
+            <div>
+              <h3 class="skill-card__title">DevOps & CI/CD</h3>
+              <span class="skill-card__level">Avanzado</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag--expert">GitHub Actions</span>
+            <span class="tag tag--expert">GitLab CI</span>
+            <span class="tag tag--expert">Docker</span>
+            <span class="tag tag--expert">Kubernetes</span>
+          </div>
+        </div>
+
+        <!-- AI Integration — destacada -->
+        <div class="skill-card skill-card--ai reveal">
+          <div class="skill-card__header">
+            <div class="skill-card__icon" style="--icon-color: #a78bfa; --icon-bg: rgba(167,139,250,0.15)">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div>
+              <h3 class="skill-card__title">AI Integration</h3>
+              <span class="skill-card__level">Avanzado · Aplicado</span>
+            </div>
+          </div>
+          <p class="skill-card__desc">
+            No solo uso IA — la <strong>integro como parte de la solución</strong>.
+            Diseño e implemento pipelines de IA dentro de aplicaciones reales:
+            chatbots, procesamiento de lenguaje natural, automatización inteligente y APIs conversacionales.
+          </p>
+          <div class="skill-tags">
+            <span class="tag tag--ai">OpenAI API</span>
+            <span class="tag tag--ai">ChatGPT Integration</span>
+            <span class="tag tag--ai">LLM Pipelines</span>
+            <span class="tag tag--ai">Chatbots / Bots</span>
+            <span class="tag tag--ai">RAG (Retrieval-Augmented)</span>
+            <span class="tag tag--ai">AWS Translate</span>
+            <span class="tag tag--ai">NLP</span>
+            <span class="tag tag--ai">Prompt Engineering</span>
+            <span class="tag tag--ai">AI Agents</span>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-card reveal">
+          <div class="skill-card__header">
+            <div class="skill-card__icon" style="--icon-color: #336791; --icon-bg: rgba(51,103,145,0.12)">
+              <i class="fas fa-database"></i>
+            </div>
+            <div>
+              <h3 class="skill-card__title">Bases de Datos & ORM</h3>
+              <span class="skill-card__level">Avanzado</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag--expert">PostgreSQL</span>
+            <span class="tag tag--expert">MySQL</span>
+            <span class="tag tag--expert">MongoDB</span>
+            <span class="tag tag--expert">Redis</span>
+            <span class="tag tag--expert">DynamoDB</span>
+            <span class="tag tag--expert">SQLite</span>
+            <span class="tag tag--expert">Prisma</span>
+            <span class="tag tag--expert">Sequelize</span>
+            <span class="tag tag--expert">GraphQL</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEMO ===== -->
+  <section class="section demo" id="demo">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">// live code</span>
+        <h2 class="section__title">Demos <span class="gradient-text">Interactivos</span></h2>
+        <p class="section__desc">Código corriendo en tiempo real, directo en el navegador</p>
+      </div>
+
+      <div class="demo__wrapper">
+        <div class="demo__tabs">
+          <button class="demo__tab active" data-demo="neural">
+            <i class="fas fa-brain"></i> Red Neuronal
+          </button>
+          <button class="demo__tab" data-demo="sort">
+            <i class="fas fa-sort-amount-up"></i> Algoritmos
+          </button>
+          <button class="demo__tab" data-demo="api">
+            <i class="fas fa-plug"></i> API Live
+          </button>
+        </div>
+
+        <div class="demo__stage">
+          <div class="demo__pane active" id="demo-neural">
+            <div class="demo__info">
+              <h4>Red Neuronal Animada</h4>
+              <p>Visualización de propagación de señales. Hover para interactuar.</p>
+            </div>
+            <canvas id="neuralCanvas" class="demo__canvas"></canvas>
+          </div>
+
+          <div class="demo__pane" id="demo-sort">
+            <div class="demo__info">
+              <h4>Sorting Visualizer</h4>
+              <p>Visualización de algoritmos de ordenamiento en tiempo real.</p>
+            </div>
+            <div class="sort__controls">
+              <button class="btn btn--small" id="sortBubble">Bubble Sort</button>
+              <button class="btn btn--small" id="sortQuick">Quick Sort</button>
+              <button class="btn btn--small btn--ghost" id="sortReset">
+                <i class="fas fa-shuffle"></i> Shuffle
+              </button>
+              <div class="sort__speed">
+                <label>Velocidad</label>
+                <input type="range" id="sortSpeed" min="1" max="10" value="5" />
+              </div>
+            </div>
+            <canvas id="sortCanvas" class="demo__canvas"></canvas>
+          </div>
+
+          <div class="demo__pane" id="demo-api">
+            <div class="demo__info">
+              <h4>API Client en Vivo</h4>
+              <p>Fetch a API pública — observá el request/response flow.</p>
+            </div>
+            <div class="api__demo">
+              <div class="api__request">
+                <div class="api__label">REQUEST</div>
+                <div class="api__code">
+                  <span class="api__method">GET</span>
+                  <span class="api__url">https://jsonplaceholder.typicode.com/users</span>
+                </div>
+                <button class="btn btn--primary btn--small" id="apiFetch">
+                  <i class="fas fa-paper-plane"></i> Ejecutar
+                </button>
+              </div>
+              <div class="api__arrow" id="apiArrow">
+                <div class="api__arrow-line"></div>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="api__response" id="apiResponse">
+                <div class="api__label">RESPONSE</div>
+                <div class="api__status" id="apiStatus"></div>
+                <div class="api__body" id="apiBody">
+                  <span class="api__placeholder">Presioná "Ejecutar" para ver la respuesta...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">// proyectos</span>
+        <h2 class="section__title">Lo que he <span class="gradient-text">construido</span></h2>
+        <p class="section__desc">Proyectos destacados — sistemas reales con impacto real</p>
+      </div>
+
+      <div class="projects__grid">
+
+        <div class="project-card reveal">
+          <div class="project-card__top">
+            <div class="project-card__folder"><i class="fas fa-folder-open"></i></div>
+            <div class="project-card__links">
+              <a href="#" class="project-card__link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="project-card__link" aria-label="Live"><i class="fas fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3>[Nombre del Proyecto 1]</h3>
+          <p>[Descripción: qué problema resuelve, qué impacto tuvo, qué escala maneja]</p>
+          <div class="project-card__tags">
+            <span>NestJS</span><span>AWS ECS</span><span>PostgreSQL</span><span>React</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card__top">
+            <div class="project-card__folder"><i class="fas fa-folder-open"></i></div>
+            <div class="project-card__links">
+              <a href="#" class="project-card__link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="project-card__link" aria-label="Live"><i class="fas fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3>[Nombre del Proyecto 2]</h3>
+          <p>[Descripción: qué problema resuelve, qué impacto tuvo, qué escala maneja]</p>
+          <div class="project-card__tags">
+            <span>React Native</span><span>Node.js</span><span>MongoDB</span><span>Redis</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card__top">
+            <div class="project-card__folder"><i class="fas fa-folder-open"></i></div>
+            <div class="project-card__links">
+              <a href="#" class="project-card__link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="project-card__link" aria-label="Live"><i class="fas fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3>[Nombre del Proyecto 3]</h3>
+          <p>[Descripción: qué problema resuelve, qué impacto tuvo, qué escala maneja]</p>
+          <div class="project-card__tags">
+            <span>Flutter</span><span>AWS IoT</span><span>DynamoDB</span><span>GraphQL</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">// carrera</span>
+        <h2 class="section__title">Experiencia <span class="gradient-text">Laboral</span></h2>
+      </div>
+
+      <div class="timeline">
+
+        <!-- XBio Medical — Actual -->
+        <div class="timeline__item reveal">
+          <div class="timeline__marker"></div>
+          <div class="timeline__card">
+            <div class="timeline__meta">
+              <span class="timeline__company">XBio Medical</span>
+              <span class="timeline__date">2025 – Presente</span>
+            </div>
+            <h3 class="timeline__role">Full Stack Senior Developer</h3>
+            <ul class="timeline__achievements">
+              <li>[Logro o responsabilidad principal — ej: Arquitectura de sistema médico en AWS con alta disponibilidad]</li>
+              <li>[Logro cuantificable #2]</li>
+              <li>[Logro cuantificable #3]</li>
+            </ul>
+            <div class="timeline__tags">
+              <span>NestJS</span><span>React</span><span>AWS</span><span>PostgreSQL</span><span>Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cuentame -->
+        <div class="timeline__item reveal">
+          <div class="timeline__marker"></div>
+          <div class="timeline__card">
+            <div class="timeline__meta">
+              <span class="timeline__company">Cuentame</span>
+              <span class="timeline__date">2022 – 2025</span>
+            </div>
+            <h3 class="timeline__role">Full Stack Senior Developer</h3>
+            <ul class="timeline__achievements">
+              <li>[Logro o responsabilidad principal — ej: Desarrollo de plataforma con arquitectura de microservicios]</li>
+              <li>[Logro cuantificable #2 — ej: Implementé CI/CD con GitHub Actions reduciendo tiempos de deploy un X%]</li>
+              <li>[Logro cuantificable #3]</li>
+            </ul>
+            <div class="timeline__tags">
+              <span>Node.js</span><span>React</span><span>AWS ECS</span><span>Redis</span><span>MongoDB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- IISAC Technologies -->
+        <div class="timeline__item reveal">
+          <div class="timeline__marker"></div>
+          <div class="timeline__card">
+            <div class="timeline__meta">
+              <span class="timeline__company">IISAC Technologies</span>
+              <span class="timeline__date">2018 – 2022</span>
+            </div>
+            <h3 class="timeline__role">Full Stack Developer → Senior</h3>
+            <ul class="timeline__achievements">
+              <li>[Logro o responsabilidad principal]</li>
+              <li>[Logro cuantificable #2 — ej: Lideré equipo de X devs en desarrollo de producto core]</li>
+              <li>[Logro cuantificable #3]</li>
+            </ul>
+            <div class="timeline__tags">
+              <span>Angular</span><span>Node.js</span><span>AWS</span><span>PostgreSQL</span><span>React Native</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Global Gate México -->
+        <div class="timeline__item reveal">
+          <div class="timeline__marker"></div>
+          <div class="timeline__card">
+            <div class="timeline__meta">
+              <span class="timeline__company">Global Gate México</span>
+              <span class="timeline__date">2016 – 2018</span>
+            </div>
+            <h3 class="timeline__role">Full Stack Developer</h3>
+            <ul class="timeline__achievements">
+              <li>[Logro o responsabilidad principal]</li>
+              <li>[Logro cuantificable #2]</li>
+            </ul>
+            <div class="timeline__tags">
+              <span>Express</span><span>React</span><span>MySQL</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agendia Nedev -->
+        <div class="timeline__item reveal">
+          <div class="timeline__marker"></div>
+          <div class="timeline__card">
+            <div class="timeline__meta">
+              <span class="timeline__company">Agendia Nedev</span>
+              <span class="timeline__date">2015 – 2016</span>
+            </div>
+            <h3 class="timeline__role">Web Developer</h3>
+            <ul class="timeline__achievements">
+              <li>[Logro o responsabilidad principal]</li>
+              <li>[Logro cuantificable #2]</li>
+            </ul>
+            <div class="timeline__tags">
+              <span>JavaScript</span><span>PHP</span><span>MySQL</span><span>HTML/CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agencia Alcance -->
+        <div class="timeline__item reveal">
+          <div class="timeline__marker"></div>
+          <div class="timeline__card">
+            <div class="timeline__meta">
+              <span class="timeline__company">Agencia Alcance</span>
+              <span class="timeline__date">2014 – 2015</span>
+            </div>
+            <h3 class="timeline__role">Junior Developer</h3>
+            <ul class="timeline__achievements">
+              <li>[Primeros pasos profesionales — ej: Desarrollo de sitios web y landing pages para clientes]</li>
+              <li>[Logro o responsabilidad #2]</li>
+            </ul>
+            <div class="timeline__tags">
+              <span>JavaScript</span><span>HTML/CSS</span><span>PHP</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+
+        <div class="contact__left reveal">
+          <span class="section__tag">// contacto</span>
+          <h2 class="section__title">¿Empezamos algo <span class="gradient-text">juntos?</span></h2>
+          <p>
+            Estoy abierto a roles full-time, proyectos freelance y consultoría técnica.
+            Si tenés un problema complejo para resolver, me interesa escucharte.
+          </p>
+          <div class="contact__links">
+            <a href="mailto:luis.alankasta@gmail.com" class="contact__link">
+              <div class="contact__link-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="contact__link-label">Email</span>
+                <span class="contact__link-value">luis.alankasta@gmail.com</span>
+              </div>
+            </a>
+            <a href="[LINKEDIN-URL]" target="_blank" rel="noopener" class="contact__link">
+              <div class="contact__link-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <span class="contact__link-label">LinkedIn</span>
+                <span class="contact__link-value">/in/[tu-usuario]</span>
+              </div>
+            </a>
+            <a href="[GITHUB-URL]" target="_blank" rel="noopener" class="contact__link">
+              <div class="contact__link-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <span class="contact__link-label">GitHub</span>
+                <span class="contact__link-value">@[tu-usuario]</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact__form reveal" id="contactForm">
+          <div class="form-group">
+            <label class="form-label" for="fname">Nombre</label>
+            <input class="form-input" type="text" id="fname" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="femail">Email</label>
+            <input class="form-input" type="email" id="femail" placeholder="tu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="fmsg">Mensaje</label>
+            <textarea class="form-input form-textarea" id="fmsg" rows="5" placeholder="Contame sobre tu proyecto o propuesta..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            Enviar mensaje <i class="fas fa-paper-plane"></i>
+          </button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="#hero" class="nav__logo">
+          <span class="nav__logo-bracket">&lt;</span>lacv<span class="nav__logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer__copy">
+          Diseñado &amp; desarrollado por <strong id="footerName">Luis Alan Castañeda Villalobos</strong>
+        </p>
+        <p class="footer__code">&lt;built with passion /&gt;</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
