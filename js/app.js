@@ -1,8 +1,9 @@
-/* ==============================================
-   PORTFOLIO APP — Full Stack Dev CV
-   ============================================== */
+console.log('%c👋 Ey, tú.', 'font-size:2rem; font-weight:bold; color:#8b5cf6;');
+console.log('%cSí, tú. El que abre DevTools en portfolios ajenos. 😄', 'font-size:1rem; color:#a78bfa;');
+console.log('%cEso significa que sabes lo que buscas — y eso ya dice mucho.', 'font-size:0.9rem; color:#94a3b8;');
+console.log('%c¿Trabajamos juntos? Hay un formulario de contacto por aquí...', 'font-size:0.95rem; font-weight:600; color:#38bdf8;');
+console.log('%c— Luis Alan Castañeda', 'font-size:0.85rem; color:#5c5a78; font-style:italic;');
 
-/* ---- Theme Toggle ---- */
 const root = document.documentElement;
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon = document.getElementById('themeIcon');
@@ -18,11 +19,8 @@ themeToggle.addEventListener('click', () => {
   setTheme(current === 'dark' ? 'light' : 'dark');
 });
 
-// Load saved theme
-const saved = localStorage.getItem('theme') || 'dark';
-setTheme(saved);
+setTheme(localStorage.getItem('theme') || 'dark');
 
-/* ---- Mobile nav ---- */
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
@@ -38,21 +36,19 @@ document.querySelectorAll('.nav__link').forEach(link => {
   });
 });
 
-/* ---- Nav scroll effect ---- */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 20);
 }, { passive: true });
 
-/* ---- Cursor glow ---- */
 const cursorGlow = document.getElementById('cursorGlow');
 window.addEventListener('mousemove', e => {
   cursorGlow.style.left = e.clientX + 'px';
   cursorGlow.style.top = e.clientY + 'px';
 }, { passive: true });
 
-/* ---- Typed text hero ---- */
 const phrases = [
+  'Software Engineer · 10+ yrs',
   'Full Stack Senior Developer',
   'AI Integration Engineer',
   'Cloud Architect · AWS',
@@ -88,7 +84,6 @@ function type() {
 
 type();
 
-/* ---- Counter animation ---- */
 function animateCounter(el, target, duration = 1400) {
   const start = performance.now();
   const update = (now) => {
@@ -101,9 +96,7 @@ function animateCounter(el, target, duration = 1400) {
   requestAnimationFrame(update);
 }
 
-/* ---- Reveal on scroll ---- */
 const revealEls = document.querySelectorAll('.reveal');
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
@@ -116,13 +109,11 @@ const observer = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => observer.observe(el));
 
-/* ---- Counter trigger on hero visibility ---- */
 const counters = document.querySelectorAll('.counter');
 const counterObs = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const target = parseInt(entry.target.dataset.target);
-      animateCounter(entry.target, target);
+      animateCounter(entry.target, parseInt(entry.target.dataset.target));
       counterObs.unobserve(entry.target);
     }
   });
@@ -130,9 +121,6 @@ const counterObs = new IntersectionObserver(entries => {
 
 counters.forEach(c => counterObs.observe(c));
 
-/* =============================================
-   HERO CANVAS — Particle Mesh
-   ============================================= */
 (function initHeroCanvas() {
   const canvas = document.getElementById('heroCanvas');
   const ctx = canvas.getContext('2d');
@@ -146,13 +134,11 @@ counters.forEach(c => counterObs.observe(c));
   }
 
   function getAccent() {
-    const theme = root.getAttribute('data-theme');
-    return theme === 'dark' ? [139, 92, 246] : [124, 58, 237];
+    return root.getAttribute('data-theme') === 'dark' ? [139, 92, 246] : [124, 58, 237];
   }
 
   function getAccent2() {
-    const theme = root.getAttribute('data-theme');
-    return theme === 'dark' ? [6, 182, 212] : [2, 132, 199];
+    return root.getAttribute('data-theme') === 'dark' ? [6, 182, 212] : [2, 132, 199];
   }
 
   class Particle {
@@ -170,8 +156,6 @@ counters.forEach(c => counterObs.observe(c));
       this.y += this.vy;
       if (this.x < 0 || this.x > W) this.vx *= -1;
       if (this.y < 0 || this.y > H) this.vy *= -1;
-
-      // mouse repulsion
       if (mouse.x !== null) {
         const dx = this.x - mouse.x, dy = this.y - mouse.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
@@ -206,13 +190,10 @@ counters.forEach(c => counterObs.observe(c));
         if (dist < MAX_DIST) {
           const alpha = (1 - dist / MAX_DIST) * 0.25;
           const t = dist / MAX_DIST;
-          const r = Math.round(r1 + (r2 - r1) * t);
-          const g = Math.round(g1 + (g2 - g1) * t);
-          const b = Math.round(b1 + (b2 - b1) * t);
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(${r},${g},${b},${alpha})`;
+          ctx.strokeStyle = `rgba(${Math.round(r1+(r2-r1)*t)},${Math.round(g1+(g2-g1)*t)},${Math.round(b1+(b2-b1)*t)},${alpha})`;
           ctx.lineWidth = 0.7;
           ctx.stroke();
         }
@@ -243,9 +224,6 @@ counters.forEach(c => counterObs.observe(c));
   loop();
 })();
 
-/* =============================================
-   DEMO TABS
-   ============================================= */
 const tabs = document.querySelectorAll('.demo__tab');
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
@@ -259,9 +237,6 @@ tabs.forEach(tab => {
   });
 });
 
-/* =============================================
-   DEMO 1 — Neural Network Canvas
-   ============================================= */
 let neuralRaf = null;
 
 function initNeuralCanvas() {
@@ -315,7 +290,6 @@ function initNeuralCanvas() {
     const C = getThemeColors();
     const now = Date.now() * 0.001;
 
-    // Draw connections
     for (let l = 0; l < LAYERS.length - 1; l++) {
       getNodesByLayer(l).forEach(a => {
         getNodesByLayer(l + 1).forEach(b => {
@@ -329,7 +303,6 @@ function initNeuralCanvas() {
       });
     }
 
-    // Draw signals
     signals = signals.filter(s => s.t <= 1);
     signals.forEach(s => {
       s.t += s.speed;
@@ -344,13 +317,10 @@ function initNeuralCanvas() {
       ctx.fill();
     });
 
-    // Draw nodes
     nodes.forEach(n => {
       const pulse = Math.sin(now * 1.5 + n.pulse) * 0.5 + 0.5;
       const r = 6 + pulse * 2;
       const alpha = 0.5 + pulse * 0.5;
-
-      // glow
       const glow = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, r * 3);
       glow.addColorStop(0, `${C.node}${(alpha * 0.4).toFixed(2)})`);
       glow.addColorStop(1, 'transparent');
@@ -358,33 +328,25 @@ function initNeuralCanvas() {
       ctx.arc(n.x, n.y, r * 3, 0, Math.PI * 2);
       ctx.fillStyle = glow;
       ctx.fill();
-
       ctx.beginPath();
       ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
       ctx.fillStyle = `${C.node}${alpha.toFixed(2)})`;
       ctx.fill();
     });
 
-    // spawn signals periodically
     if (frame % 18 === 0) spawnSignal();
     frame++;
-
     neuralRaf = requestAnimationFrame(loop);
   }
 
-  // Pre-spawn some signals
   for (let i = 0; i < 8; i++) spawnSignal();
   loop();
 }
 
-// Auto-init neural on load
 window.addEventListener('load', () => {
   setTimeout(initNeuralCanvas, 200);
 });
 
-/* =============================================
-   DEMO 2 — Sorting Visualizer
-   ============================================= */
 let sortRaf = null, sorting = false;
 
 function initSortCanvas() {
@@ -423,7 +385,6 @@ function initSortCanvas() {
       const h = (val / N) * (H - 10);
       const x = i * barW;
       const y = H - h;
-
       let color;
       if (highlights[i] === 'compare') color = '#f59e0b';
       else if (highlights[i] === 'swap') color = '#ef4444';
@@ -435,7 +396,6 @@ function initSortCanvas() {
         const b = Math.round(dark ? 246 + (212 - 246) * t : 237 + (199 - 237) * t);
         color = `rgb(${r},${g},${b})`;
       }
-
       ctx.fillStyle = color;
       ctx.fillRect(x + 1, y, barW - 2, h);
     });
@@ -445,20 +405,13 @@ function initSortCanvas() {
 
   draw();
 
-  function sleep(ms) {
-    return new Promise(res => setTimeout(res, ms));
-  }
-
-  function getDelay() {
-    const speed = document.getElementById('sortSpeed')?.value || 5;
-    return Math.round(160 / speed);
-  }
+  const sleep = ms => new Promise(res => setTimeout(res, ms));
+  const getDelay = () => Math.round(160 / (document.getElementById('sortSpeed')?.value || 5));
 
   async function bubbleSort() {
     sorting = true;
-    const n = arr.length;
-    for (let i = 0; i < n - 1; i++) {
-      for (let j = 0; j < n - i - 1; j++) {
+    for (let i = 0; i < arr.length - 1; i++) {
+      for (let j = 0; j < arr.length - i - 1; j++) {
         if (!sorting) return;
         highlights = { [j]: 'compare', [j + 1]: 'compare' };
         await sleep(getDelay());
@@ -468,9 +421,8 @@ function initSortCanvas() {
           await sleep(getDelay());
         }
       }
-      highlights[n - 1 - i] = 'done';
+      highlights[arr.length - 1 - i] = 'done';
     }
-    // mark all done
     arr.forEach((_, i) => { highlights[i] = 'done'; });
     sorting = false;
   }
@@ -501,26 +453,11 @@ function initSortCanvas() {
     }
   }
 
-  document.getElementById('sortBubble').addEventListener('click', () => {
-    if (sorting) return;
-    bubbleSort();
-  });
-
-  document.getElementById('sortQuick').addEventListener('click', () => {
-    if (sorting) return;
-    sorting = true;
-    quickSort();
-  });
-
-  document.getElementById('sortReset').addEventListener('click', () => {
-    sorting = false;
-    setTimeout(() => { shuffle(); }, 50);
-  });
+  document.getElementById('sortBubble').addEventListener('click', () => { if (!sorting) bubbleSort(); });
+  document.getElementById('sortQuick').addEventListener('click', () => { if (!sorting) { sorting = true; quickSort(); } });
+  document.getElementById('sortReset').addEventListener('click', () => { sorting = false; setTimeout(shuffle, 50); });
 }
 
-/* =============================================
-   DEMO 3 — API Client
-   ============================================= */
 document.getElementById('apiFetch').addEventListener('click', async () => {
   const btn = document.getElementById('apiFetch');
   const statusEl = document.getElementById('apiStatus');
@@ -542,7 +479,6 @@ document.getElementById('apiFetch').addEventListener('click', async () => {
     statusEl.textContent = `✓ ${res.status} ${res.statusText} · ${elapsed}ms`;
     statusEl.className = 'api__status ok';
 
-    // format output nicely
     const mini = data.slice(0, 4).map(u => ({
       id: u.id,
       name: u.name,
@@ -561,35 +497,66 @@ document.getElementById('apiFetch').addEventListener('click', async () => {
   btn.innerHTML = '<i class="fas fa-paper-plane"></i> Ejecutar';
 });
 
-/* =============================================
-   CONTACT FORM (fake submit)
-   ============================================= */
-document.getElementById('contactForm').addEventListener('submit', async function (e) {
-  e.preventDefault();
-  const btn = this.querySelector('button[type="submit"]');
-  const note = document.getElementById('formNote');
+(function initTerminal() {
+  const body = document.getElementById('terminalBody');
+  if (!body) return;
 
-  btn.disabled = true;
-  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+  const logs = [
+    { level: 'info',    msg: 'Server started on <em>port 3000</em>' },
+    { level: 'info',    msg: 'Connected to <em>PostgreSQL</em> · pool size: 10' },
+    { level: 'info',    msg: 'Redis cache <em>ready</em>' },
+    { level: 'success', msg: 'GET  <em>/api/health</em>  200  · 3ms' },
+    { level: 'success', msg: 'POST <em>/api/auth/login</em>  200  · 47ms' },
+    { level: 'info',    msg: 'JWT issued · expires in <em>8h</em>' },
+    { level: 'success', msg: 'GET  <em>/api/users/42</em>  200  · 12ms' },
+    { level: 'warn',    msg: 'Rate limit: <em>80%</em> threshold reached for ip ::1' },
+    { level: 'success', msg: 'POST <em>/api/messages</em>  201  · 23ms' },
+    { level: 'info',    msg: 'OpenAI response received · tokens: <em>318</em>' },
+    { level: 'success', msg: 'WebSocket connected · clients: <em>7</em>' },
+    { level: 'success', msg: 'GET  <em>/api/reports</em>  200  · 89ms' },
+    { level: 'info',    msg: 'Cron job <em>cleanup:sessions</em> executed' },
+    { level: 'error',   msg: 'GET  <em>/api/secret</em>  401  · Unauthorized' },
+    { level: 'success', msg: 'DELETE <em>/api/cache</em>  204  · 5ms' },
+    { level: 'info',    msg: 'S3 upload complete · <em>reports/2026-04.pdf</em>' },
+    { level: 'success', msg: 'POST <em>/api/notify</em>  200  · WhatsApp sent' },
+    { level: 'warn',    msg: 'DB query slow: <em>342ms</em> — consider indexing' },
+    { level: 'success', msg: 'GET  <em>/api/users</em>  200  · 18ms' },
+    { level: 'info',    msg: 'Deploy complete · v<em>2.4.1</em> is live 🚀' },
+  ];
 
-  // Simulate async send
-  await new Promise(res => setTimeout(res, 1200));
+  function getTime() {
+    const d = new Date();
+    return `${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}:${String(d.getSeconds()).padStart(2,'0')}`;
+  }
 
-  btn.innerHTML = '<i class="fas fa-check"></i> Enviado!';
-  note.textContent = '¡Mensaje enviado! Te respondo pronto.';
-  note.className = 'form-note success';
-  this.reset();
+  const levelLabel = { info: '[INFO]', success: '[OK] ', warn: '[WARN]', error: '[ERR] ' };
+  const MAX_LINES = 10;
+  let idx = 0;
 
-  setTimeout(() => {
-    btn.disabled = false;
-    btn.innerHTML = 'Enviar mensaje <i class="fas fa-paper-plane"></i>';
-    note.textContent = '';
-  }, 4000);
-});
+  function appendLine() {
+    const log = logs[idx % logs.length];
+    const line = document.createElement('div');
+    line.className = 'terminal__line';
+    line.innerHTML = `
+      <span class="terminal__time">${getTime()}</span>
+      <span class="terminal__level--${log.level}">${levelLabel[log.level]}</span>
+      <span class="terminal__msg">${log.msg}</span>`;
+    body.appendChild(line);
+    if (body.children.length > MAX_LINES) body.removeChild(body.firstChild);
+    idx++;
+  }
 
-/* =============================================
-   ACTIVE NAV LINK ON SCROLL
-   ============================================= */
+  const termObs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      for (let i = 0; i < 6; i++) setTimeout(appendLine, i * 300);
+      setInterval(appendLine, 2200);
+      termObs.disconnect();
+    }
+  }, { threshold: 0.3 });
+
+  termObs.observe(body);
+})();
+
 const sections = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav__link');
 
@@ -605,7 +572,6 @@ const sectionObserver = new IntersectionObserver(entries => {
 
 sections.forEach(s => sectionObserver.observe(s));
 
-// Add active-nav styles inline (avoids extra CSS)
 const style = document.createElement('style');
 style.textContent = `.nav__link.active-nav { color: var(--accent) !important; }`;
 document.head.appendChild(style);

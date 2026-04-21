@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luis Alan Castañeda | Ingeniero de Software · Full Stack Sr Developer</title>
-  <meta name="description" content="Luis Alan Castañeda Villalobos — Ingeniero de Software con +10 años construyendo sistemas escalables en Node.js, React, AWS y arquitecturas cloud." />
+  <title>Luis Alan Castañeda | Full Stack Sr Developer</title>
+  <meta name="description" content="Luis Alan Castañeda Villalobos — Full Stack Senior Developer with 10+ years of experience in Node.js, React, AWS and cloud architectures." />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,22 +23,23 @@
       <ul class="nav__links" id="navLinks">
         <li><a href="#skills" class="nav__link">Skills</a></li>
         <li><a href="#demo" class="nav__link">Demo</a></li>
-        <li><a href="#projects" class="nav__link">Proyectos</a></li>
-        <li><a href="#experience" class="nav__link">Experiencia</a></li>
-        <li><a href="#contact" class="nav__link">Contacto</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
       </ul>
       <div class="nav__actions">
-        <a href="index-en.html" class="lang-toggle" aria-label="Switch to English">EN</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <a href="index.html" class="lang-toggle" aria-label="Cambiar a español">ES</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
           <i class="fas fa-moon" id="themeIcon"></i>
         </button>
-        <button class="nav__hamburger" id="hamburger" aria-label="Menú">
+        <button class="nav__hamburger" id="hamburger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </nav>
 
+  <!-- HERO -->
   <section class="hero" id="hero">
     <canvas id="heroCanvas" class="hero__canvas"></canvas>
     <div class="hero__noise"></div>
@@ -46,11 +47,11 @@
     <div class="hero__content">
       <div class="hero__available">
         <span class="hero__available-dot"></span>
-        Disponible para nuevas oportunidades
+        Available for new opportunities
       </div>
 
       <h1 class="hero__title">
-        <span class="hero__greeting">Hola, soy</span>
+        <span class="hero__greeting">Hi, I'm</span>
         <span class="hero__name gradient-text" id="heroName">Luis Alan Castañeda</span>
         <span class="hero__typed-wrapper">
           <span id="typedText" class="hero__typed"></span>
@@ -59,35 +60,35 @@
       </h1>
 
       <p class="hero__desc">
-        Ingeniero de Software con <strong id="yearsExp">10+</strong> años construyendo
-        sistemas escalables — desde arquitecturas cloud en AWS hasta apps móviles.
-        Integro <strong>Inteligencia Artificial</strong> (OpenAI, LLMs, chatbots) como parte real de la solución.
-        Egresado del <strong>Instituto Tecnológico de La Laguna</strong>.
+        Full Stack Senior Developer with <strong id="yearsExp">10+</strong> years building
+        scalable systems — from AWS cloud architectures to mobile apps.
+        I integrate <strong>Artificial Intelligence</strong> (OpenAI, LLMs, chatbots) as a real part of the solution.
+        Graduate of the <strong>Instituto Tecnológico de La Laguna</strong>.
       </p>
 
       <div class="hero__cta">
         <a href="#contact" class="btn btn--primary">
-          Trabajemos juntos <i class="fas fa-arrow-right"></i>
+          Let's work together <i class="fas fa-arrow-right"></i>
         </a>
         <a href="#projects" class="btn btn--ghost">
-          Ver proyectos
+          View projects
         </a>
       </div>
 
       <div class="hero__stats">
         <div class="hero__stat">
           <span class="hero__stat-num counter" data-target="10">0</span><span>+</span>
-          <span class="hero__stat-label">Años exp.</span>
+          <span class="hero__stat-label">Years exp.</span>
         </div>
         <div class="hero__stat-divider"></div>
         <div class="hero__stat">
           <span class="hero__stat-num counter" data-target="50">0</span><span>+</span>
-          <span class="hero__stat-label">Proyectos</span>
+          <span class="hero__stat-label">Projects</span>
         </div>
         <div class="hero__stat-divider"></div>
         <div class="hero__stat">
           <span class="hero__stat-num counter" data-target="30">0</span><span>+</span>
-          <span class="hero__stat-label">Tecnologías</span>
+          <span class="hero__stat-label">Technologies</span>
         </div>
       </div>
     </div>
@@ -100,12 +101,13 @@
     </div>
   </section>
 
+  <!-- SKILLS -->
   <section class="section skills" id="skills">
     <div class="container">
       <div class="section__header">
         <span class="section__tag">// expertise</span>
-        <h2 class="section__title">Stack <span class="gradient-text">Tecnológico</span></h2>
-        <p class="section__desc">Tecnologías con las que construyo soluciones de nivel enterprise</p>
+        <h2 class="section__title">Tech <span class="gradient-text">Stack</span></h2>
+        <p class="section__desc">Technologies I use to build enterprise-grade solutions</p>
       </div>
 
       <div class="skills__grid">
@@ -117,20 +119,20 @@
             </div>
             <div>
               <h3 class="skill-card__title">Backend</h3>
-              <span class="skill-card__level">Avanzado</span>
+              <span class="skill-card__level">Advanced</span>
             </div>
           </div>
           <div class="skill-tags">
-            <span class="tag tag--expert" data-tip="Runtime JS">Node.js</span>
-            <span class="tag tag--expert" data-tip="Framework enterprise">NestJS</span>
-            <span class="tag tag--expert" data-tip="Framework minimalista">Express</span>
+            <span class="tag tag--expert" data-tip="JS Runtime">Node.js</span>
+            <span class="tag tag--expert" data-tip="Enterprise framework">NestJS</span>
+            <span class="tag tag--expert" data-tip="Minimalist framework">Express</span>
             <span class="tag tag--expert" data-tip="Full-stack React">Next.js</span>
             <span class="tag" data-tip="Scripting & ML">Python</span>
             <span class="tag" data-tip="Enterprise apps">Java</span>
-            <span class="tag" data-tip="Ecosystem Microsoft">.NET</span>
-            <span class="tag" data-tip="Web clásica y APIs">PHP</span>
-            <span class="tag" data-tip="Framework PHP">Laravel</span>
-            <span class="tag" data-tip="Ecosystem Microsoft">C#</span>
+            <span class="tag" data-tip="Microsoft ecosystem">.NET</span>
+            <span class="tag" data-tip="Classic web & APIs">PHP</span>
+            <span class="tag" data-tip="PHP framework">Laravel</span>
+            <span class="tag" data-tip="Microsoft ecosystem">C#</span>
           </div>
         </div>
 
@@ -141,7 +143,7 @@
             </div>
             <div>
               <h3 class="skill-card__title">Frontend</h3>
-              <span class="skill-card__level">Avanzado</span>
+              <span class="skill-card__level">Advanced</span>
             </div>
           </div>
           <div class="skill-tags">
@@ -160,7 +162,7 @@
             </div>
             <div>
               <h3 class="skill-card__title">Mobile</h3>
-              <span class="skill-card__level">Avanzado</span>
+              <span class="skill-card__level">Advanced</span>
             </div>
           </div>
           <div class="skill-tags">
@@ -176,7 +178,7 @@
             </div>
             <div>
               <h3 class="skill-card__title">AWS Cloud</h3>
-              <span class="skill-card__level">Avanzado</span>
+              <span class="skill-card__level">Advanced</span>
             </div>
           </div>
           <div class="skill-tags">
@@ -207,7 +209,7 @@
             </div>
             <div>
               <h3 class="skill-card__title">DevOps & CI/CD</h3>
-              <span class="skill-card__level">Avanzado</span>
+              <span class="skill-card__level">Advanced</span>
             </div>
           </div>
           <div class="skill-tags">
@@ -225,13 +227,13 @@
             </div>
             <div>
               <h3 class="skill-card__title">AI Integration</h3>
-              <span class="skill-card__level">Avanzado · Aplicado</span>
+              <span class="skill-card__level">Advanced · Applied</span>
             </div>
           </div>
           <p class="skill-card__desc">
-            No solo uso IA — la <strong>integro como parte de la solución</strong>.
-            Diseño e implemento pipelines de IA dentro de aplicaciones reales:
-            chatbots, procesamiento de lenguaje natural, automatización inteligente y APIs conversacionales.
+            I don't just use AI — I <strong>integrate it as part of the solution</strong>.
+            I design and implement AI pipelines inside real applications:
+            chatbots, natural language processing, intelligent automation and conversational APIs.
           </p>
           <div class="skill-tags">
             <span class="tag tag--ai">OpenAI API</span>
@@ -252,8 +254,8 @@
               <i class="fas fa-database"></i>
             </div>
             <div>
-              <h3 class="skill-card__title">Bases de Datos & ORM</h3>
-              <span class="skill-card__level">Avanzado</span>
+              <h3 class="skill-card__title">Databases & ORM</h3>
+              <span class="skill-card__level">Advanced</span>
             </div>
           </div>
           <div class="skill-tags">
@@ -275,8 +277,8 @@
               <i class="fas fa-flask"></i>
             </div>
             <div>
-              <h3 class="skill-card__title">Testing & Documentación</h3>
-              <span class="skill-card__level">Avanzado</span>
+              <h3 class="skill-card__title">Testing & Documentation</h3>
+              <span class="skill-card__level">Advanced</span>
             </div>
           </div>
           <div class="skill-tags">
@@ -286,7 +288,7 @@
             <span class="tag tag--expert">Pentesting</span>
             <span class="tag tag--expert">Jest</span>
             <span class="tag tag--expert">Supertest</span>
-            <span class="tag">Documentación técnica</span>
+            <span class="tag">Technical Documentation</span>
             <span class="tag">Swagger / OpenAPI</span>
           </div>
         </div>
@@ -295,21 +297,22 @@
     </div>
   </section>
 
+  <!-- DEMO -->
   <section class="section demo" id="demo">
     <div class="container">
       <div class="section__header">
         <span class="section__tag">// live code</span>
-        <h2 class="section__title">Demos <span class="gradient-text">Interactivos</span></h2>
-        <p class="section__desc">Código corriendo en tiempo real, directo en el navegador</p>
+        <h2 class="section__title">Interactive <span class="gradient-text">Demos</span></h2>
+        <p class="section__desc">Code running in real time, right in the browser</p>
       </div>
 
       <div class="demo__wrapper">
         <div class="demo__tabs">
           <button class="demo__tab active" data-demo="neural">
-            <i class="fas fa-brain"></i> Red Neuronal
+            <i class="fas fa-brain"></i> Neural Network
           </button>
           <button class="demo__tab" data-demo="sort">
-            <i class="fas fa-sort-amount-up"></i> Algoritmos
+            <i class="fas fa-sort-amount-up"></i> Algorithms
           </button>
           <button class="demo__tab" data-demo="api">
             <i class="fas fa-plug"></i> API Live
@@ -319,8 +322,8 @@
         <div class="demo__stage">
           <div class="demo__pane active" id="demo-neural">
             <div class="demo__info">
-              <h4>Red Neuronal Animada</h4>
-              <p>Visualización de propagación de señales. Hover para interactuar.</p>
+              <h4>Animated Neural Network</h4>
+              <p>Signal propagation visualization. Hover to interact.</p>
             </div>
             <canvas id="neuralCanvas" class="demo__canvas"></canvas>
           </div>
@@ -328,7 +331,7 @@
           <div class="demo__pane" id="demo-sort">
             <div class="demo__info">
               <h4>Sorting Visualizer</h4>
-              <p>Visualización de algoritmos de ordenamiento en tiempo real.</p>
+              <p>Real-time sorting algorithm visualization.</p>
             </div>
             <div class="sort__controls">
               <button class="btn btn--small" id="sortBubble">Bubble Sort</button>
@@ -337,7 +340,7 @@
                 <i class="fas fa-shuffle"></i> Shuffle
               </button>
               <div class="sort__speed">
-                <label>Velocidad</label>
+                <label>Speed</label>
                 <input type="range" id="sortSpeed" min="1" max="10" value="5" />
               </div>
             </div>
@@ -346,8 +349,8 @@
 
           <div class="demo__pane" id="demo-api">
             <div class="demo__info">
-              <h4>API Client en Vivo</h4>
-              <p>Fetch a API pública — observá el request/response flow.</p>
+              <h4>Live API Client</h4>
+              <p>Fetch to a public API — watch the request/response flow.</p>
             </div>
             <div class="api__demo">
               <div class="api__request">
@@ -357,7 +360,7 @@
                   <span class="api__url">https://jsonplaceholder.typicode.com/users</span>
                 </div>
                 <button class="btn btn--primary btn--small" id="apiFetch">
-                  <i class="fas fa-paper-plane"></i> Ejecutar
+                  <i class="fas fa-paper-plane"></i> Execute
                 </button>
               </div>
               <div class="api__arrow" id="apiArrow">
@@ -368,7 +371,7 @@
                 <div class="api__label">RESPONSE</div>
                 <div class="api__status" id="apiStatus"></div>
                 <div class="api__body" id="apiBody">
-                  <span class="api__placeholder">Presioná "Ejecutar" para ver la respuesta...</span>
+                  <span class="api__placeholder">Press "Execute" to see the response...</span>
                 </div>
               </div>
             </div>
@@ -378,12 +381,13 @@
     </div>
   </section>
 
+  <!-- PROJECTS -->
   <section class="section projects" id="projects">
     <div class="container">
       <div class="section__header">
-        <span class="section__tag">// proyectos</span>
-        <h2 class="section__title">Lo que he <span class="gradient-text">construido</span></h2>
-        <p class="section__desc">Proyectos destacados — sistemas reales con impacto real</p>
+        <span class="section__tag">// projects</span>
+        <h2 class="section__title">What I've <span class="gradient-text">built</span></h2>
+        <p class="section__desc">Featured projects — real systems with real impact</p>
       </div>
 
       <div class="projects__grid">
@@ -397,11 +401,11 @@
             </div>
           </div>
           <h3>Cuentame</h3>
-          <p>Plataforma SaaS en producción con arquitectura de microservicios. Integración de providers para SMS, videollamadas, WhatsApp, pagos y OpenAI. Código bajo NDA — referencias disponibles ante contacto.</p>
+          <p>Production SaaS platform built on a microservices architecture. Integrated providers for SMS, video calls, WhatsApp, payments and OpenAI. Code under NDA — references available upon contact.</p>
           <div class="project-card__tags">
-            <span>Node.js</span><span>Microservicios</span><span>Redis</span><span>OpenAI</span><span>AWS</span>
+            <span>Node.js</span><span>Microservices</span><span>Redis</span><span>OpenAI</span><span>AWS</span>
           </div>
-          <div class="project-card__refs"><i class="fas fa-user-check"></i> Referencias verificables disponibles</div>
+          <div class="project-card__refs"><i class="fas fa-user-check"></i> Verifiable references available</div>
         </div>
 
         <div class="project-card reveal">
@@ -413,11 +417,11 @@
             </div>
           </div>
           <h3>Vendora</h3>
-          <p>Plataforma de comercio en producción desarrollada de punta a punta como Full Stack Sr. Dev. Arquitectura completa: frontend, backend y despliegue cloud. Código bajo NDA — referencias disponibles ante contacto.</p>
+          <p>End-to-end commerce platform in production, developed as Full Stack Sr. Dev. Complete architecture: frontend, backend and cloud deployment. Code under NDA — references available upon contact.</p>
           <div class="project-card__tags">
             <span>Node.js</span><span>React</span><span>PostgreSQL</span><span>AWS</span><span>Docker</span>
           </div>
-          <div class="project-card__refs"><i class="fas fa-user-check"></i> Referencias verificables disponibles</div>
+          <div class="project-card__refs"><i class="fas fa-user-check"></i> Verifiable references available</div>
         </div>
 
         <div class="project-card reveal">
@@ -428,23 +432,24 @@
               <a href="https://plataforma.universidadnuevalaguna.edu.mx/" target="_blank" rel="noopener" class="project-card__link" aria-label="Live"><i class="fas fa-arrow-up-right-from-square"></i></a>
             </div>
           </div>
-          <h3>Plataforma Educativa CNL</h3>
-          <p>Sistema de gestión académica en producción para la Universidad Nueva Laguna (Torreón, Coahuila). Desarrollo backend de la plataforma institucional activa. Código bajo NDA — referencias disponibles ante contacto.</p>
+          <h3>CNL Educational Platform</h3>
+          <p>Academic management system in production for Universidad Nueva Laguna (Torreón, Coahuila). Backend development of the active institutional platform. Code under NDA — references available upon contact.</p>
           <div class="project-card__tags">
             <span>Node.js</span><span>Angular</span><span>MySQL</span><span>PHP</span>
           </div>
-          <div class="project-card__refs"><i class="fas fa-user-check"></i> Referencias verificables disponibles</div>
+          <div class="project-card__refs"><i class="fas fa-user-check"></i> Verifiable references available</div>
         </div>
 
       </div>
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
   <section class="section experience" id="experience">
     <div class="container">
       <div class="section__header">
-        <span class="section__tag">// carrera</span>
-        <h2 class="section__title">Experiencia <span class="gradient-text">Laboral</span></h2>
+        <span class="section__tag">// career</span>
+        <h2 class="section__title">Work <span class="gradient-text">Experience</span></h2>
       </div>
 
       <div class="timeline">
@@ -454,16 +459,16 @@
           <div class="timeline__card">
             <div class="timeline__meta">
               <span class="timeline__company">XBio Medical</span>
-              <span class="timeline__date">2025 – Presente</span>
+              <span class="timeline__date">2025 – Present</span>
             </div>
             <h3 class="timeline__role">Full Stack Senior Developer</h3>
             <ul class="timeline__achievements">
-              <li>Desarrollo de plataforma SaaS web y mobile para el sector médico con arquitectura de microservicios en AWS.</li>
-              <li>Diseño e implementación de APIs escalables con TypeScript bajo estándares de alta disponibilidad y seguridad.</li>
-              <li>Trabajo con infraestructura cloud crítica; detalles bajo acuerdo de confidencialidad (NDA).</li>
+              <li>Building a web and mobile SaaS platform for the medical sector with a microservices architecture on AWS.</li>
+              <li>Designing and implementing scalable APIs with TypeScript under high availability and security standards.</li>
+              <li>Working with critical cloud infrastructure; details under NDA.</li>
             </ul>
             <div class="timeline__tags">
-              <span>TypeScript</span><span>AWS</span><span>Microservicios</span><span>API REST</span><span>Mobile</span>
+              <span>TypeScript</span><span>AWS</span><span>Microservices</span><span>REST API</span><span>Mobile</span>
             </div>
           </div>
         </div>
@@ -477,12 +482,12 @@
             </div>
             <h3 class="timeline__role">Backend Mid Developer</h3>
             <ul class="timeline__achievements">
-              <li>Desarrollo de plataforma SaaS web con arquitectura de microservicios en Node.js e integración de múltiples providers: SMS, videollamadas, WhatsApp y pago electrónico.</li>
-              <li>Integración de OpenAI para automatización y procesamiento de lenguaje natural dentro de flujos de negocio.</li>
-              <li>Gestión de caché con Redis y servicios adicionales de AWS para optimizar performance y escalabilidad.</li>
+              <li>Developed a SaaS web platform with a Node.js microservices architecture, integrating multiple providers: SMS, video calls, WhatsApp and electronic payments.</li>
+              <li>Integrated OpenAI for automation and natural language processing within business workflows.</li>
+              <li>Managed Redis caching and additional AWS services to optimize performance and scalability.</li>
             </ul>
             <div class="timeline__tags">
-              <span>Node.js</span><span>Microservicios</span><span>Redis</span><span>OpenAI</span><span>AWS</span><span>WhatsApp API</span><span>Pagos</span>
+              <span>Node.js</span><span>Microservices</span><span>Redis</span><span>OpenAI</span><span>AWS</span><span>WhatsApp API</span><span>Payments</span>
             </div>
           </div>
         </div>
@@ -496,11 +501,11 @@
             </div>
             <h3 class="timeline__role">Backend Developer</h3>
             <ul class="timeline__achievements">
-              <li>Desarrollo de API REST en Node.js y servicios complementarios en Laravel para un sistema de monitoreo de cámaras de seguridad.</li>
-              <li>Plataforma de soporte operativo con cobertura en 8 estados del país, con frontend en Angular.</li>
+              <li>Developed a REST API in Node.js and complementary services in Laravel for a security camera monitoring system.</li>
+              <li>Operational support platform with coverage across 8 states, with an Angular frontend.</li>
             </ul>
             <div class="timeline__tags">
-              <span>Node.js</span><span>Laravel</span><span>Angular</span><span>API REST</span><span>Seguridad</span>
+              <span>Node.js</span><span>Laravel</span><span>Angular</span><span>REST API</span><span>Security</span>
             </div>
           </div>
         </div>
@@ -514,9 +519,9 @@
             </div>
             <h3 class="timeline__role">Full Stack Developer</h3>
             <ul class="timeline__achievements">
-              <li>Plataforma educativa completa para la Universidad Nueva Laguna (Torreón, Coahuila) y Data Warehouse para el Poder Judicial del Gobierno de Coahuila.</li>
-              <li>Aplicación móvil "Mujer Segura Coahuila" y múltiples sitios web corporativos (haciendaloslobos.mx, bakerymachinery.com, entre otros).</li>
-              <li>Proyectos full stack diversos abarcando desde e-commerce hasta portales institucionales.</li>
+              <li>Full educational platform for Universidad Nueva Laguna (Torreón, Coahuila) and a Data Warehouse for the Judicial Branch of the Coahuila State Government.</li>
+              <li>"Mujer Segura Coahuila" mobile app and multiple corporate websites (haciendaloslobos.mx, bakerymachinery.com, among others).</li>
+              <li>Diverse full stack projects ranging from e-commerce to institutional portals.</li>
             </ul>
             <div class="timeline__tags">
               <span>Angular</span><span>Node.js</span><span>React Native</span><span>PHP</span><span>MySQL</span><span>PostgreSQL</span>
@@ -533,8 +538,8 @@
             </div>
             <h3 class="timeline__role">Full Stack Developer</h3>
             <ul class="timeline__achievements">
-              <li>Desarrollo del sitio web corporativo y cotizador online para operaciones de la empresa.</li>
-              <li>Automatización de procesos internos para optimizar flujos operativos.</li>
+              <li>Developed the corporate website and an online quote tool for company operations.</li>
+              <li>Automated internal processes to optimize operational workflows.</li>
             </ul>
             <div class="timeline__tags">
               <span>JavaScript</span><span>Node.js</span><span>MySQL</span><span>HTML/CSS</span>
@@ -551,7 +556,7 @@
             </div>
             <h3 class="timeline__role">Jr. Full Stack Developer</h3>
             <ul class="timeline__achievements">
-              <li>Desarrollo de páginas web diversas para clientes de la agencia con stack PHP.</li>
+              <li>Developed various client websites for the agency using a PHP stack.</li>
             </ul>
             <div class="timeline__tags">
               <span>PHP</span><span>JavaScript</span><span>MySQL</span><span>HTML/CSS</span>
@@ -568,10 +573,10 @@
             </div>
             <h3 class="timeline__role">Jr. Frontend Developer</h3>
             <ul class="timeline__achievements">
-              <li>Desarrollo del sitio web de la agencia y diseño de páginas web para clientes.</li>
+              <li>Developed the agency's website and web designs for clients.</li>
             </ul>
             <div class="timeline__tags">
-              <span>HTML/CSS</span><span>JavaScript</span><span>Diseño Web</span>
+              <span>HTML/CSS</span><span>JavaScript</span><span>Web Design</span>
             </div>
           </div>
         </div>
@@ -580,16 +585,17 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section class="section contact" id="contact">
     <div class="container">
       <div class="contact__grid">
 
         <div class="contact__left reveal">
-          <span class="section__tag">// contacto</span>
-          <h2 class="section__title">¿Empezamos algo <span class="gradient-text">juntos?</span></h2>
+          <span class="section__tag">// contact</span>
+          <h2 class="section__title">Shall we build something <span class="gradient-text">together?</span></h2>
           <p>
-            Estoy abierto a roles full-time, proyectos freelance y consultoría técnica.
-            Si tenés un problema complejo para resolver, me interesa escucharte.
+            Open to full-time roles, freelance projects and technical consulting.
+            If you have a complex problem to solve, I'd love to hear about it.
           </p>
           <div class="contact__links">
             <a href="mailto:luis.alankasta@gmail.com" class="contact__link">
@@ -618,6 +624,7 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
@@ -625,7 +632,7 @@
           <span class="nav__logo-bracket">&lt;</span>Luis Casta<span class="nav__logo-bracket">/&gt;</span>
         </a>
         <p class="footer__copy">
-          Diseñado &amp; desarrollado por <strong id="footerName">Luis Alan Castañeda Villalobos</strong>
+          Designed &amp; developed by <strong id="footerName">Luis Alan Castañeda Villalobos</strong>
         </p>
         <p class="footer__code">&lt;built with passion /&gt;</p>
       </div>

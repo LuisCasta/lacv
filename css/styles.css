@@ -1,6 +1,4 @@
-/* ============================================
-   CSS CUSTOM PROPERTIES — DESIGN TOKENS
-   ============================================ */
+/* tokens */
 :root {
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
@@ -17,7 +15,7 @@
   --container-max: 1200px;
 }
 
-/* ===== DARK THEME ===== */
+/* dark */
 [data-theme="dark"] {
   --bg:          #06060f;
   --bg-alt:      #0c0c1d;
@@ -57,7 +55,7 @@
   --cursor-glow: rgba(139, 92, 246, 0.3);
 }
 
-/* ===== LIGHT THEME ===== */
+/* light */
 [data-theme="light"] {
   --bg:          #fafaff;
   --bg-alt:      #f0f0fa;
@@ -97,9 +95,7 @@
   --cursor-glow: rgba(124, 58, 237, 0.25);
 }
 
-/* ============================================
-   RESET & BASE
-   ============================================ */
+/* base */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -139,9 +135,7 @@ ul { list-style: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 input, textarea, button { font-family: inherit; }
 
-/* ============================================
-   UTILITY
-   ============================================ */
+/* utils */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -156,9 +150,7 @@ input, textarea, button { font-family: inherit; }
   background-clip: text;
 }
 
-/* ============================================
-   CURSOR GLOW
-   ============================================ */
+/* cursor */
 .cursor-glow {
   position: fixed;
   width: 400px;
@@ -174,9 +166,7 @@ input, textarea, button { font-family: inherit; }
 
 body:hover .cursor-glow { opacity: 1; }
 
-/* ============================================
-   NAVIGATION
-   ============================================ */
+/* nav */
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -243,6 +233,28 @@ body:hover .cursor-glow { opacity: 1; }
   gap: 12px;
 }
 
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-2);
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+.lang-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .theme-toggle {
   display: flex;
   align-items: center;
@@ -277,9 +289,7 @@ body:hover .cursor-glow { opacity: 1; }
   transition: all var(--transition);
 }
 
-/* ============================================
-   SECTION SHARED STYLES
-   ============================================ */
+/* sections */
 .section {
   padding: 120px 0;
   position: relative;
@@ -327,9 +337,7 @@ body:hover .cursor-glow { opacity: 1; }
   transform: translateY(0);
 }
 
-/* ============================================
-   BUTTONS
-   ============================================ */
+/* buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -380,9 +388,7 @@ body:hover .cursor-glow { opacity: 1; }
 
 .btn--full { width: 100%; justify-content: center; }
 
-/* ============================================
-   HERO
-   ============================================ */
+/* hero */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -592,9 +598,7 @@ body:hover .cursor-glow { opacity: 1; }
   100% { top: 56px; opacity: 0; }
 }
 
-/* ============================================
-   SKILLS
-   ============================================ */
+/* skills */
 .skills {
   background: var(--bg-alt);
   position: relative;
@@ -769,9 +773,7 @@ body:hover .cursor-glow { opacity: 1; }
 
 /* AI card responsive handled in main breakpoints below */
 
-/* ============================================
-   DEMO SECTION
-   ============================================ */
+/* demo */
 .demo {
   position: relative;
   overflow: hidden;
@@ -964,9 +966,7 @@ body:hover .cursor-glow { opacity: 1; }
 
 .api__placeholder { color: var(--text-3); font-style: italic; }
 
-/* ============================================
-   PROJECTS
-   ============================================ */
+/* projects */
 .projects {
   background: var(--bg-alt);
 }
@@ -1032,6 +1032,29 @@ body:hover .cursor-glow { opacity: 1; }
 .project-card__links {
   display: flex;
   gap: 10px;
+  align-items: center;
+}
+
+.project-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  color: var(--text-3);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 3px 8px;
+}
+
+.project-card__refs {
+  margin-top: 14px;
+  font-size: 0.78rem;
+  color: var(--accent-2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.85;
 }
 
 .project-card__link {
@@ -1082,9 +1105,7 @@ body:hover .cursor-glow { opacity: 1; }
   font-weight: 500;
 }
 
-/* ============================================
-   EXPERIENCE TIMELINE
-   ============================================ */
+/* timeline */
 .experience {
   position: relative;
 }
@@ -1207,9 +1228,7 @@ body:hover .cursor-glow { opacity: 1; }
   border-radius: 100px;
 }
 
-/* ============================================
-   CONTACT
-   ============================================ */
+/* contact */
 .contact {
   background: var(--bg-alt);
   position: relative;
@@ -1350,9 +1369,70 @@ body:hover .cursor-glow { opacity: 1; }
 .form-note.success { color: #22c55e; }
 .form-note.error { color: #ef4444; }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+/* terminal */
+.terminal {
+  background: #0d0d1a;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  box-shadow: var(--shadow-card);
+}
+
+.terminal__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: rgba(255,255,255,0.04);
+  border-bottom: 1px solid var(--border);
+}
+
+.terminal__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.terminal__dot--red    { background: #ff5f57; }
+.terminal__dot--yellow { background: #febc2e; }
+.terminal__dot--green  { background: #28c840; }
+
+.terminal__title {
+  margin-left: 8px;
+  font-size: 0.75rem;
+  color: var(--text-3);
+}
+
+.terminal__body {
+  padding: 16px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: hidden;
+}
+
+.terminal__line {
+  display: flex;
+  gap: 10px;
+  animation: termFadeIn 0.3s ease forwards;
+  opacity: 0;
+}
+
+@keyframes termFadeIn {
+  to { opacity: 1; }
+}
+
+.terminal__time  { color: #5c5a78; flex-shrink: 0; }
+.terminal__level--info    { color: #38bdf8; flex-shrink: 0; }
+.terminal__level--success { color: #22c55e; flex-shrink: 0; }
+.terminal__level--warn    { color: #f59e0b; flex-shrink: 0; }
+.terminal__level--error   { color: #ef4444; flex-shrink: 0; }
+.terminal__msg { color: #c4b5fd; }
+.terminal__msg em { color: #94a3b8; font-style: normal; }
+
+/* footer */
 .footer {
   padding: 40px 0;
   border-top: 1px solid var(--border);
@@ -1377,9 +1457,7 @@ body:hover .cursor-glow { opacity: 1; }
   color: var(--text-3);
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
+/* responsive */
 
 /* --- Tablet landscape (≤1024px) --- */
 @media (max-width: 1024px) {
@@ -1501,9 +1579,7 @@ body:hover .cursor-glow { opacity: 1; }
   .skill-card { padding: 20px 16px; }
 }
 
-/* ============================================
-   LOADING ANIMATION
-   ============================================ */
+/* loading */
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
